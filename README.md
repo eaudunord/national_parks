@@ -12,19 +12,9 @@ Our team will submit a Final Report that describes the following:
 Extract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
 
 
-Transform: what data cleaning or transformation was required.
-National Parks Visitation data set:
-Keep Columns:
-- YearRaw
-- Region
-- State
-- Unit Name
-- Visitors
-
-Clean:
-- YearRaw > Rename to Year
-- Unit Name > Rename to Park Name
-- Unit Type> Filter on National Park
+Transform: what data cleaning or transformation was required.</br>
+National Parks Visitation data set:</br>
+Select columns via Pandas and filter out relevant park names</br>
 
 
 Load: the final database, tables/collections, and why this was chosen.
