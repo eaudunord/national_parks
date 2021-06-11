@@ -13,6 +13,18 @@ Extract: your original data sources and how the data was formatted (CSV, JSON, p
 
 
 Transform: what data cleaning or transformation was required.
+National Parks Visitation data set:
+Keep Columns:
+- YearRaw
+- Region
+- State
+- Unit Name
+- Visitors
+
+Clean:
+- YearRaw > Rename to Year
+- Unit Name > Rename to Park Name
+- Unit Type> Filter on National Park
 
 
 Load: the final database, tables/collections, and why this was chosen.
