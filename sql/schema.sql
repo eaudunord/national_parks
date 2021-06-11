@@ -17,3 +17,16 @@ CREATE TABLE parks_visitation (
 	visitors FLOAT,
 	year INT
 );
+
+CREATE TABLE "national_parks" (
+    "id" int   NOT NULL,
+    "park_code" varchar(30)   NOT NULL,
+    "park_name" varchar(100)   NOT NULL,
+    "state" varchar(30)   NOT NULL,
+    "acres" int   NULL,
+    "latitude" decimal   NOT NULL,
+    "longitude" decimal   NOT NULL,
+    CONSTRAINT "pk_national_parks" PRIMARY KEY (
+        "id"
+     )
+);
