@@ -8,3 +8,12 @@ CREATE TABLE bear_attacks (
 	description varchar,
 	bear_type varchar(25)
 );
+
+CREATE TABLE parks_visitation (
+	id int PRIMARY KEY,
+	region VARCHAR (10),
+	state VARCHAR (2),
+	park_name VARCHAR (50) NOT NULL,
+	visitors FLOAT,
+	year INT
+);
