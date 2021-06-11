@@ -9,11 +9,13 @@ https://data.world/ajsanne/north-america-bear-killings<br/>
 
 Our team will submit a Final Report that describes the following:
 
-Extract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
+Extract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc)<br/>
+We will read the cvs files into pandas dataframes and filter the data. Then load the dataframes into Postgres database
 
 
 Transform: what data cleaning or transformation was required.</br>
-National Parks Visitation data set:</br>
+
+
 Select columns via Pandas and filter out relevant park names</br>
 
 
