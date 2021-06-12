@@ -75,6 +75,20 @@ CREATE TABLE "trail_features" (
 	REFERENCES park_trails(trail_id)
 );
 
+CREATE TABLE "species" (
+    "id" int   NOT NULL,
+    "species_id" VARCHAR   NOT NULL,
+    "park_name" VARCHAR   NOT NULL,
+    "category" VARCHAR   NOT NULL,
+    "scientific_name" VARCHAR   NOT NULL,
+    "common_names" VARCHAR   NOT NULL,
+    "occurrence" VARCHAR   NOT NULL,
+    "abundance" VARCHAR   NOT NULL,
+    CONSTRAINT "pk_species" PRIMARY KEY (
+        "id"
+     )
+);
+
 -- creating foreign keys / might need to remove from create strings
 
 ALTER TABLE "parks_visitation" ADD CONSTRAINT "fk_parks_visitation_park_name" FOREIGN KEY("park_name")
