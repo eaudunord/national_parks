@@ -1,6 +1,6 @@
 CREATE TABLE bear_attacks (
     id int PRIMARY KEY,
-    name varchar(40) NOT NULL,
+    name varchar(40),
     age int,
     date date,
     type varchar(25),
@@ -74,3 +74,23 @@ CREATE TABLE "trail_features" (
 	CONSTRAINT "fk_trail_id" FOREIGN KEY("trail_id")
 	REFERENCES park_trails(trail_id)
 );
+
+-- creating foreign keys / might need to remove from create strings
+
+ALTER TABLE "parks_visitation" ADD CONSTRAINT "fk_parks_visitation_park_name" FOREIGN KEY("park_name")
+REFERENCES "national_parks" ("park_name");
+
+ALTER TABLE "bear_attacks" ADD CONSTRAINT "fk_bear_attacks_location" FOREIGN KEY("location")
+REFERENCES "national_parks" ("park_name");
+
+ALTER TABLE "park_trails" ADD CONSTRAINT "fk_park_trails_trail_id" FOREIGN KEY("trail_id")
+REFERENCES "trail_activities" ("trail_id");
+
+ALTER TABLE "park_trails" ADD CONSTRAINT "fk_park_trails_park_name" FOREIGN KEY("park_name")
+REFERENCES "national_parks" ("park_name");
+
+ALTER TABLE "trail_activities" ADD CONSTRAINT "fk_trail_activities_park_name" FOREIGN KEY("park_name")
+REFERENCES "park_trails" ("park_name");
+
+ALTER TABLE "trail_features" ADD CONSTRAINT "fk_trail_features_trail_id_park_name" FOREIGN KEY("trail_id", "park_name")
+REFERENCES "park_trails" ("trail_id", "park_name");
