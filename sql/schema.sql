@@ -108,3 +108,6 @@ REFERENCES "park_trails" ("park_name");
 
 ALTER TABLE "trail_features" ADD CONSTRAINT "fk_trail_features_trail_id_park_name" FOREIGN KEY("trail_id", "park_name")
 REFERENCES "park_trails" ("trail_id", "park_name");
+
+ALTER TABLE "species" ADD CONSTRAINT "species_park_name" FOREIGN KEY("park_name")
+REFERENCES "national_parks" ("park_name");
